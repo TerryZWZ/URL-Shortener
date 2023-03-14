@@ -1,0 +1,127 @@
+html {
+  background-color: rgb(156, 209, 255);
+}
+
+body {
+  font-family: "Segoe UI";
+  text-align: center;
+}
+
+#urlForm {
+  /*Box model stuff*/
+  width: 1500px;
+  margin: auto;
+  margin-top: 2%;
+  background-color: #33C1FF;
+  /*Typography stuff*/
+  font-size: 4em;
+  color: #003E5A;
+  /*Miscellaneous*/
+  box-shadow: 30px 30px #003E5A;
+}
+
+.formControl {
+  /*Box model stuff*/
+  width: 1300px;
+  height: 100px;
+  border-color: #003E5A;
+  border-width: 10px;
+  outline: none;
+  background-color: #33C1FF;
+  /*Typography stuff*/
+  font-family: "Segoe UI";
+  font-size: 0.5em;
+  color: #003E5A;
+}
+
+#createURL {
+  /*Box model stuff*/
+  width: 200px;
+  margin-bottom: 2%;
+  border: none;
+  background-color: #003E5A;
+  /*Typography stuff*/
+  font-family: "Segoe UI";
+  font-size: 0.8em;
+  color: #33C1FF;
+  /*Miscellaneous*/
+  cursor: pointer;
+}
+
+#resultCard {
+  /*Box model stuff*/
+  width: 1200px;
+  margin: auto;
+  margin-top: 2%;
+  background-color: #33C1FF;
+  /*Typography stuff*/
+  font-size: 2em;
+  color: #003E5A;
+  /*Miscellaneous*/
+  box-shadow: 30px 30px #003E5A;
+}
+
+a {
+  color: teal;
+}
+
+/* --- Adjusting for Screen Resolution --- */
+@media (min-width: 144px) {
+  #container {
+    zoom: 7.50%;
+  }
+}
+
+@media (min-width: 240px) {
+  #container {
+    zoom: 12.50%;
+  }
+}
+
+@media (min-width: 480px) {
+  #container {
+    zoom: 16.67%;
+  }
+}
+
+@media (min-width: 640px) {
+  #container {
+    zoom: 33.33%;
+  }
+}
+
+@media (min-width: 1280px) {
+  #container {
+    zoom: 66.67%;
+  }
+}
+
+@media (min-width: 1366px) {
+  #container {
+    zoom: 71.15%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #container {
+    zoom: 83.33%;
+  }
+}
+
+@media (min-width: 1920px) {
+  #container {
+    zoom: 100%;
+  }
+}
+
+@media (min-width: 2560px) {
+  #container {
+    zoom: 133.33%;
+  }
+}
+
+@media (min-width: 3840px) {
+  #container {
+    zoom: 200%;
+  }
+}
