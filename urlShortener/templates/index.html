@@ -19,10 +19,19 @@
             </form>
         </div>
 
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                var newPath = '/' + '{{ chars }}';
+                var link = document.getElementById('dynamicLink');
+                link.setAttribute('href', newPath);
+                link.textContent = window.location.origin + newPath;
+            });
+        </script>
+
         {% if chars %}
         <div id="resultCard">
             <h1>Your Short URL: <br>
-                <a target="_blank" href="https://tzwz.up.railway.app/{{ chars }}">tzwz.up.railway.app/{{ chars }}</a>
+                <a id="dynamicLink" href="#">Link</a>
             </h1>
         </div>
         {% endif %}

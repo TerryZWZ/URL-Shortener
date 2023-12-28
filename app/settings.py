@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*', '.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://tzwz.up.railway.app']
+CSRF_TRUSTED_ORIGINS = []
 
 # Application definition
 
