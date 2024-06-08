@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>URL Shortener</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="urlForm">
+            <h2>Shorten a URL!</h2>
+            <form method="POST" action="/create/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button id="createURL">CREATE</button>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                var newPath = '/' + '{{ chars }}';
+                var link = document.getElementById('dynamicLink');
+                link.setAttribute('href', newPath);
+                link.textContent = window.location.origin + newPath;
+            });
+        </script>
+
+        {% if chars %}
+        <div id="resultCard">
+            <h1>Your Short URL: <br>
+                <a id="dynamicLink" href="#">Link</a>
+            </h1>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
