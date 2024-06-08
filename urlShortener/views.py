@@ -49,4 +49,4 @@ def createShortURL(request):
             return render(request, 'index.html', { 'chars' : randomChars, 'form' : form})
 
 # Remember to run new database: python manage.py makemigrations / python manage.py migrate
-# For static pages: python manage.py collectstatic
+# For static pages: python manage.py collectstatic --noinput --clear

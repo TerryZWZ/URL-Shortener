@@ -29,11 +29,33 @@
             });
         </script>
 
+        <script type="text/javascript">
+            function copy() {
+                let copyText = document.getElementById("dynamicLink").textContent;
+                let tempInput = document.createElement("input");
+                tempInput.style.position = "absolute";
+                tempInput.style.opacity = "0";
+                tempInput.value = copyText;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                
+                let button = document.getElementById("copyButton");
+                button.classList.add("copied");
+
+                setTimeout(function() {
+                    button.classList.remove("copied");
+                }, 250);
+            }
+        </script>
+
         {% if chars %}
         <div id="resultCard">
             <h1>Your Short URL: <br>
                 <a id="dynamicLink" href="#">Link</a>
             </h1>
+            <button id="copyButton" onclick="copy()">COPY</button>
         </div>
         {% endif %}
     </div>
