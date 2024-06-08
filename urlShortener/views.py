@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
+from django.utils import timezone
 from .models import ShortURL
 from .forms import CreateNewShortURL
-from datetime import datetime
 import random, string
 
 # Function for Home Page
@@ -42,7 +42,7 @@ def createShortURL(request):
                     randomChars += random.choice (randomCharsList)
             
             # Date Created for shortened URL
-            d = datetime.now()
+            d = timezone.now()
             s = ShortURL(Original_URL = originalWebsite, Short_URL = randomChars, Time_Created = d)
             s.save()
 

@@ -8,9 +8,21 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
-
+import django
 from django.core.wsgi import get_wsgi_application
+from django.core.management import execute_from_command_line
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')
 
-app = get_wsgi_application()
+# Set up Django
+django.setup()
+
+# Run migrations
+try:
+    execute_from_command_line(['manage.py', 'migrate'])
+except Exception as e:
+    print(f"Error running migrations: {e}")
+
+application = get_wsgi_application()
+
+app = application
